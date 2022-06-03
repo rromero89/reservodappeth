@@ -1,6 +1,6 @@
 {
-  "name": "appreservo",
-  "version": "1.0.0",
+  "name": "doge",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
@@ -12,7 +12,6 @@
     "@web3-react/walletconnect-connector": "^6.2.4",
     "axios": "^0.21.1",
     "framer-motion": "^4.1.17",
-    "node-sass": "4.14.1",
     "query-string": "^7.0.1",
     "react": "^17.0.2",
     "react-copy-to-clipboard": "^5.0.3",
@@ -46,24 +45,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "babel-plugin-react-require": "^3.1.3",
-    "react-scripts": "^2.1.3"
-  },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rromero89/appreservo.git"
-  },
-  "keywords": [
-    "reservo"
-  ],
-  "author": "reservo",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rromero89/appreservo/issues"
-  },
-  "homepage": "https://github.com/rromero89/appreservo#readme"
+  }
 }
