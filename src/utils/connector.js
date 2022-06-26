@@ -2,7 +2,7 @@ import { InjectedConnector } from "@web3-react/injected-connector";
 import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
 
 export const injected = new InjectedConnector({
-  supportedChainIds: [1, 2, 3, 4, 5, 56, 97],
+  supportedChainIds: [1, 2, 3, 4, 5, 56, 97, 4113, 41114],
 });
 
 export const walletconnect = new WalletConnectConnector({
@@ -10,3 +10,4 @@ export const walletconnect = new WalletConnectConnector({
   qrcode: true,
   pollingInterval: 12000,
 });
+

@@ -16,10 +16,10 @@ const App = () => {
   const context = useWeb3React();
 
   useEffect(() => {
-    console.log(context);
+    console.log('CONTEXTO:: ',context);
     console.log(chainId);
     if (active) {
-      if (chainId !== 56) {
+      if (chainId !== 41113) {
         console.error("Wrong ChainID");
         setIsWrongNetwork(true);
       } else {

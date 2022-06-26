@@ -1,14 +1,22 @@
 import { useState, useEffect } from "react";
 import { useWeb3React } from "@web3-react/core";
 
-import { injected } from "./connector";
+import { injected } from "./connector"; 
 
 export function useEagerConnect() {
+
+  var connected = false;
+  
   const { activate, active } = useWeb3React();
 
   const [tried, setTried] = useState(false);
 
-  useEffect(() => {
+  //const { library } = useWeb3React();
+  //const web3 = new Web3(library); 
+
+  useEffect(() => {     
+   // connected = providerRPC();
+   // console.log('Connected: ',connected);
     injected.isAuthorized().then((isAuthorized: boolean) => {
       if (isAuthorized) {
         activate(injected, undefined, true).catch(() => {
@@ -29,6 +37,8 @@ export function useEagerConnect() {
 
   return tried;
 }
+
+
 
 export function useInactiveListener(suppress: boolean = false) {
   const { active, error, activate } = useWeb3React();

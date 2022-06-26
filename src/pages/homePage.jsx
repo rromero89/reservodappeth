@@ -36,25 +36,7 @@ const Home = () => {
         buttonText="CONNECT WALLET"
       />
     );
-  }
-
-  // return (
-  //   <Modal
-  //     variant="acceptReferrer"
-  //     title="Accept the referrer"
-  //     description="*accepting referrer is an one time irreversible action."
-  //     buttonText="ACCEPT NOW"
-  //   />
-  // );
-
-  return (
-    <Modal
-      variant="addReferrer"
-      title="Add referrer"
-      description="**adding referrer is an one time irreversible action."
-      buttonText="ADD REFERRER NOW"
-    />
-  );
+  }  
 };
 
 export default Home;
