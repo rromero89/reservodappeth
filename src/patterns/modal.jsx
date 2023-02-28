@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import Web3 from "web3";
-import { abi, address,avalancheTestNet } from "../utils/constants";
+import { abi, address,celoTesNet } from "../utils/constants";
 import { useWeb3React } from "@web3-react/core"; 
 import detectEthereumProvider from '@metamask/detect-provider';
 
@@ -78,8 +78,8 @@ const Modal = ({
     </div>
   );
   
-  // Provider of Avax for Metamask
-  async function setProviderAvax() {
+  // Provider of Avax or Celo for Metamask
+  async function setProvider() {
     
     const provider = await detectEthereumProvider({
       mustBeMetaMask: true
@@ -88,7 +88,7 @@ const Modal = ({
     if (provider) {
       try {
         await provider.request({ method: 'eth_requestAccounts' });
-        await provider.request({ method: 'wallet_addEthereumChain', params: [avalancheTestNet] });
+        await provider.request({ method: 'wallet_addEthereumChain', params: [celoTesNet] });
         // Activate InjectedProvider
         activate(injected);
       } catch (e) {
@@ -105,7 +105,7 @@ const Modal = ({
         className="btn_primary"
         onClick={
           isMetamask
-            ? () => setProviderAvax()
+            ? () => setProvider()
             : isTrustWallet
             ? () => activate(walletconnect)
             : null

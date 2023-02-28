@@ -1,50 +1,29 @@
-import { useWeb3React } from "@web3-react/core";
+import logo from './logo.svg';
+import './App.css';
+import  MetamaskProvider  from './utils/wallet';
 
-import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Dashboard from "./pages/dashboard";
-
-import Modal from "./patterns/modal";
-
-import { useEagerConnect } from "./utils/hooks";
 
 const App = () => {
-  const [isWrongNetwork, setIsWrongNetwork] = useState();
-
-  useEagerConnect();
-  const { chainId, active } = useWeb3React();
-  const context = useWeb3React();
-
-  useEffect(() => {
-    console.log('CONTEXTO:: ',context);
-    console.log(chainId);
-    if (active) {
-      if (chainId !== 41113) {
-        console.error("Wrong ChainID");
-        setIsWrongNetwork(true);
-      } else {
-        setIsWrongNetwork(false);
-      }
-    }
-  }, [chainId]);
-
   return (
-    <Router>
-      <Switch>
-        <Route path="/" exact>
-          <Dashboard />
-          {isWrongNetwork && (
-            <Modal
-              variant="wrongNetwork"
-              title="Wrong network"
-              description="You are on wrong network. Please connect to BSC Mainnet to continue"
-              buttonText="Connect now"
-            />
-          )}
-        </Route>
-      </Switch>
-    </Router>
+    <div className="App">
+      <header className="App-header">
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reservoapp.com/"
+          target="_blank"
+          rel="noopener noreferrer">
+          Reservo app
+        </a>
+        <MetamaskProvider>
+           Connect to Wallet 
+        </MetamaskProvider>
+      </header>
+    </div>
   );
-};
+}
 
 export default App;
+// Copia del Archivo App.js
