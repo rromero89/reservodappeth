@@ -1578,8 +1578,8 @@ export const abi = [
     },
   ];
   
-  //AVALANCHE_MAINNET_PARAMS
-  export const avalancheMainNet = {
+//AVALANCHE_MAINNET_PARAMS
+  export const avaxMainNet = {
     chainId: '0xA86A',
     chainName: 'Avalanche Mainnet C-Chain',
     nativeCurrency: {
@@ -1589,17 +1589,31 @@ export const abi = [
     },
     rpcUrls: ['https://api.avax.network/ext/bc/C/rpc'],
     blockExplorerUrls: ['https://snowtrace.io/']
-  }
+}//fin
 
-  //AVALANCHE_TESTNET_PARAMS
-  export const avalancheTestNet = {
-    chainId: '0xA869',
-    chainName: 'Avalanche Testnet C-Chain',
-    nativeCurrency: {
-      name: 'Avalanche',
-      symbol: 'AVAX',
-      decimals: 18
+//AVALANCHE_TESTNET_PARAMS
+export const avaxTestNet = {
+chainId: '0xA869',
+chainName: 'Avalanche Testnet C-Chain',
+nativeCurrency: {
+name: 'Avalanche',
+symbol: 'AVAX',
+decimals: 18
+},
+rpcUrls: ['https://api.avax-test.network/ext/bc/C/rpc'],
+blockExplorerUrls: ['https://testnet.snowtrace.io/']
+} //fin
+
+//AVALANCHE_TESTNET_PARAMS
+export const celoTesNet = {
+  chainId: '0xA4EC',
+  chainName: 'Celo',
+  nativeCurrency: {
+  name: 'CELO',
+  symbol: 'CELO',
+  decimals: 18
   },
-    rpcUrls: ['https://api.avax-test.network/ext/bc/C/rpc'],
-    blockExplorerUrls: ['https://testnet.snowtrace.io/']
-  }
+  rpcUrls: ['https://forno.celo.org'],
+  blockExplorerUrls: ['https://explorer.celo.org']
+  } //fin
+ 
