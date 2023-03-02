@@ -1519,7 +1519,7 @@ export const abi = [
     { stateMutability: "payable", type: "receive" },
   ];
   
-  export const address = "0xf8cdb0A8DeF55443f5abB385321Ca705EC9D0eEd";
+  export const address = "0xE3441F3244F895d42a1b4b1BE8946Cd776385F6B";
   
   export const TokenList = [
     {
@@ -1604,7 +1604,7 @@ rpcUrls: ['https://api.avax-test.network/ext/bc/C/rpc'],
 blockExplorerUrls: ['https://testnet.snowtrace.io/']
 } //fin
 
-//AVALANCHE_TESTNET_PARAMS
+//CELO_TESTNET_PARAMS
 export const celoTesNet = {
   chainId: '0xA4EC',
   chainName: 'Celo',
